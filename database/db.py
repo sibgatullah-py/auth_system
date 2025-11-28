@@ -23,7 +23,7 @@ class DatabaseManager:
                 username TEXT NOT NULL,
                 password_hash TEXT NOT NULL,
                 created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-            ):
+            )
             """
         )
         self.conn.commit()

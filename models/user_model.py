@@ -19,10 +19,10 @@ class UserModel:
         
     def find_by_email(self,email:str):
         query = "SELECT * FROM users WHERE email = ?"
-        self.db.cursor.execute(query,(email))
+        self.db.cursor.execute(query,(email,))
         return self.db.cursor.fetchone()
     
     def find_by_username(self,username:str):
         query = 'SELECT * FROM username WHERE username = ?'
-        self.db.cursor.execute(query,(username))
+        self.db.cursor.execute(query,(username,))
         return self.db.cursor.fetchone()
